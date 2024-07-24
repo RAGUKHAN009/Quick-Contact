@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    cursor: context-menu;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.6s ease all;
+}
+
+.mainD {
+    background-color: #0b101d;
+    color: wheat;
+}
+
+.mainL {
+    background-color: #fafbff;
+    color: #0b101d;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerAlign {
+    width: calc(100% - 15px);
+    max-width: 300px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerAlign :nth-child(1) {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.toggleTheme {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+#SunImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+#MoonImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.heroContend {
+    width: 100%;
+    height: max-content;
+    text-align: center;
+}
+
+.heroContend h1 {
+    font-size: 2.5rem;
+}
+
+.heroContend h6 {
+    padding-bottom: 1.5rem;
+    font-size: .875rem;
+}
+
+.heroContend h5 {
+    font-size: .875rem;
+    padding-top: 20px;
+}
+
+.buttonsCont {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+
+
+}
+
+.SCButton,
+.BDButton {
+    width: auto;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 40px;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s ease all;
+    outline: none;
+    font-weight: 600;
+}
+
+.SCButtonD,
+.BDButtonD {
+    color: gray;
+    border-bottom: 2px solid grey;
+}
+
+.activeB1D,
+.activeB2D {
+    color: wheat;
+    border-color: wheat;
+}
+
+/*  */
+/*  */
+/*  */
+
+.SCButtonL,
+.BDButtonL {
+    color: gray;
+    border-bottom: 2px solid grey;
+}
+
+.activeB1L,
+.activeB2L {
+    color: #ad5fda;
+    border-color: #ad5fda;
+}
+
+/*  */
+/*  */
+/*  */
+
+.ContactCont {
+    width: 100%;
+    height: calc(100vh - 120px - 200px);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.SCCART {
+    width: 300px;
+    height: 100%;
+
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    z-index: 0;
+
+    overflow-y: scroll;
+}
+
+.SCCART::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.SCCARTS {
+    animation: SCCARTS 0.4s linear forwards;
+}
+
+@keyframes SCCARTS {
+    to {
+        left: calc(50% - 150px);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.BDCART {
+    width: 300px;
+    height: 100%;
+
+    position: absolute;
+    right: -300px;
+    opacity: 0;
+    z-index: 0;
+
+    animation: BDCART 0.4s linear forwards;
+
+    overflow-y: scroll;
+}
+
+.BDCART::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.BDCARTS {
+    animation: BDCARTS 0.4s linear forwards;
+}
+
+@keyframes BDCARTS {
+    to {
+        right: calc(50% - 150px);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+
+.SCCARTH {
+    animation: SCCARTH 0.4s linear forwards;
+    left: calc(50% - 150px);
+    opacity: 1;
+    z-index: 2;
+}
+
+@keyframes SCCARTH {
+    to {
+        left: -300px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.BDCARTH {
+    right: calc(50% - 150px);
+    opacity: 1;
+    z-index: 2;
+    animation: BDCARTH 0.4s linear forwards;
+}
+
+@keyframes BDCARTH {
+    to {
+        right: -300px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+footer {
+    width: 100%;
+    height: 33px;
+    margin-top: 10px;
+    background-color: #a395e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    color: #21242b;
+    font-size: 10px;
+}
+
+.SCCART,
+.BDCART{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+    grid-template-rows: repeat(10, 70px);
+    grid-auto-rows: 70px;
+}
+
+.GridCarts {
+    border-bottom: 1px solid #a395e9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.GridCarts:hover.LogoCont img{
+    width: 30px;
+    height: 30px;
+}
+
+.LogoCont {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogoCont img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.contendCart {
+    width: calc(100% - 50px - 20px);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.contendCart h2{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contendCart a{
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.contendCart button{
+    width: max-content;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 10px;
+    cursor: pointer;
+}
